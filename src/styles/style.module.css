@@ -1,0 +1,105 @@
+:root {
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /* Blue color scheme: dodgerblue */
+  --clr-blue-1: hsl(198deg 69% 46% / 45%);
+  --clr-blue-2: hsl(210deg 100% 7%);
+  --clr-blue-2: hsl(210deg 100% 56%);
+
+  /* Black color scheme */
+  --clr-black-1: hsl(210deg 100% 3% / 24%);
+  --clr-black-2: hsl(210deg 100% 16%);
+  --clr-black-3: hsl(0deg 0% 0% / 5%);
+  --shadow-sm: 5px 5px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 5px 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  place-content: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 64rem;
+  padding: 4rem;
+  text-align: center;
+  border: 12px double var(--clr-black-3);
+  transition: all 0.3s ease-in;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2.5em;
+}
+
+.input {
+  border-radius: 50rem;
+  padding: 0.75em 1em;
+  margin-right: 0.5rem;
+  border: 1px solid var(--clr-black-1);
+  transition: all 0.3s ease-in;
+}
+
+.input:hover,
+.input:focus {
+  outline: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn {
+  font-family: inherit;
+  border: 3px solid var(--clr-black-2);
+  border-radius: 1.5em;
+  cursor: pointer;
+  outline: 0;
+  padding: 0.5em 1em;
+  transition: all 0.3s ease-in;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  color: #fff;
+  background-color: var(--clr-black-2);
+  outline: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+hr {
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  height: 5px;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+  text-align: center;
+  width: 50%;
+}
+
+hr::before {
+  background: #fff;
+  content: '§';
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
