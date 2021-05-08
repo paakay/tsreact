@@ -1,10 +1,11 @@
 import ReactDOM from 'react-dom'
 import GuestList from './02-state-types/GuestList'
 
+import styles from './styles/style.module.css'
+
 const App = () => {
   return (
-    <div>
-      <h1>Hi there!</h1>
+    <div className={styles.container}>
       <GuestList />
     </div>
   )
